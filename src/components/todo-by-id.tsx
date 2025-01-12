@@ -11,7 +11,7 @@ export const TodoById = () => {
                     <li key={idx}>
                         <div>Id: {data?.id}</div>
                         <span>
-                            <strong>Title: {data?.title}</strong>
+                            <strong>Title: {data?.title}</strong>&nbsp;
                             <strong>Description: {data?.description}</strong>
                         </span>
                     </li>
