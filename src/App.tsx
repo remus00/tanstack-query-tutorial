@@ -1,3 +1,4 @@
+import { DeleteTodo } from './components/delete-todo';
 import { NewTodo } from './components/new-todo';
 import { Separator } from './components/separator';
 import { TodoById } from './components/todo-by-id';
@@ -14,6 +15,8 @@ function App() {
             <NewTodo />
             <Separator />
             <UpdateTodo />
+            <Separator />
+            <DeleteTodo />
         </>
     );
 }

@@ -1,6 +1,6 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { ITodo } from '../types/todo';
-import { createTodo, updateTodo } from './api';
+import { createTodo, deleteTodo, updateTodo } from './api';
 
 export const useCreateTodo = () => {
     const queryClient = useQueryClient();
@@ -48,13 +48,32 @@ export const useUpdateTodo = () => {
             if (error) {
                 console.log(error);
             } else {
-                console.log('BANAN');
-
                 await queryClient.invalidateQueries({
                     queryKey: ['todos'],
                 });
                 await queryClient.invalidateQueries({
                     queryKey: ['todo', { id: variables.id }],
+                });
+            }
+        },
+    });
+};
+
+export const useDeleteTodo = () => {
+    const queryClient = useQueryClient();
+
+    return useMutation({
+        mutationFn: (id: number) => deleteTodo(id),
+        onSuccess: () => {
+            console.log('Deleted successfully');
+        },
+        onSettled: async (_, error) => {
+            console.log('delete settled state');
+            if (error) {
+                console.log(error);
+            } else {
+                await queryClient.invalidateQueries({
+                    queryKey: ['todos'],
                 });
             }
         },

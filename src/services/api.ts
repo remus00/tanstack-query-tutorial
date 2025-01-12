@@ -19,3 +19,7 @@ export const createTodo = async (data: ITodo) => {
 export const updateTodo = async (data: ITodo) => {
     await axiosInstance.patch(`todos/${data.id}`, data);
 };
+
+export const deleteTodo = async (id: number) => {
+    await axiosInstance.delete(`todos/${id}`);
+};
