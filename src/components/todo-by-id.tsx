@@ -6,6 +6,7 @@ export const TodoById = () => {
 
     return (
         <div className="container">
+            <h1>Get Todos by id</h1>
             <ul>
                 {todosQuery.map(({ data }, idx) => (
                     <li key={idx}>

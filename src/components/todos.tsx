@@ -11,6 +11,7 @@ export const Todos = () => {
 
     return (
         <div className="container">
+            <h1>Get todos ids</h1>
             <p>Query function state: {todosIdsQuery.fetchStatus}</p>
             <p>Query data status: {todosIdsQuery.status}</p>
             <p>Global is fetching: {isFetching}</p>
