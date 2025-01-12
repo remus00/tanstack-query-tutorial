@@ -1,23 +1,17 @@
-import { DeleteTodo } from './components/delete-todo';
-import { NewTodo } from './components/new-todo';
-import { Separator } from './components/separator';
-import { TodoById } from './components/todo-by-id';
-import { Todos } from './components/todos';
-import { UpdateTodo } from './components/update-todo';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HomePage } from './pages/home-page';
+import { ProjectsPage } from './pages/projects-page';
+import { TodosPage } from './pages/todos-page';
 
 function App() {
     return (
-        <>
-            <Todos />
-            <Separator />
-            <TodoById />
-            <Separator />
-            <NewTodo />
-            <Separator />
-            <UpdateTodo />
-            <Separator />
-            <DeleteTodo />
-        </>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/todos" element={<TodosPage />} />
+                <Route path="/projects" element={<ProjectsPage />} />
+            </Routes>
+        </BrowserRouter>
     );
 }
 
