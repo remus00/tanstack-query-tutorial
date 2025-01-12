@@ -7,3 +7,7 @@ const axiosInstance = axios.create({ baseURL: BASE_URL });
 export const getTodosIds = async () => {
     return (await axiosInstance.get<ITodo[]>('todos')).data.map((todo) => todo.id);
 };
+
+export const getTodoById = async (id: number) => {
+    return (await axiosInstance.get<ITodo>(`todos/${id}`)).data;
+};
