@@ -7,14 +7,17 @@ export const TodoById = () => {
     return (
         <div className="container">
             <h1>Get Todos by id</h1>
-            <ul>
+            <ul className="grid grid-cols-2 gap-4">
                 {todosQuery.map(({ data }, idx) => (
-                    <li key={idx}>
+                    <li
+                        key={idx}
+                        className="flex flex-col rounded-lg border border-neutral-200 px-4 py-2 shadow-sm"
+                    >
                         <div>Id: {data?.id}</div>
-                        <span>
+                        <div className="flex items-center gap-4">
                             <strong>Title: {data?.title}</strong>&nbsp;
                             <strong>Description: {data?.description}</strong>
-                        </span>
+                        </div>
                     </li>
                 ))}
             </ul>

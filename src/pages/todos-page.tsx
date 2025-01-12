@@ -1,4 +1,5 @@
 import { BackToHome } from '../components/back-to-home';
+import { Container } from '../components/container';
 import { DeleteTodo } from '../components/delete-todo';
 import { NewTodo } from '../components/new-todo';
 import { Separator } from '../components/separator';
@@ -8,7 +9,7 @@ import { UpdateTodo } from '../components/update-todo';
 
 export const TodosPage = () => {
     return (
-        <>
+        <Container>
             <BackToHome />
             <Separator />
             <Todos />
@@ -20,6 +21,6 @@ export const TodosPage = () => {
             <UpdateTodo />
             <Separator />
             <DeleteTodo />
-        </>
+        </Container>
     );
 };

@@ -15,9 +15,16 @@ export const Todos = () => {
             <p>Query function state: {todosIdsQuery.fetchStatus}</p>
             <p>Query data status: {todosIdsQuery.status}</p>
             <p>Global is fetching: {isFetching}</p>
-            {todosIdsQuery?.data?.map((id) => (
-                <p key={id}>Id: {id}</p>
-            ))}
+            <div className="my-4 grid grid-cols-2 gap-4">
+                {todosIdsQuery?.data?.map((id) => (
+                    <p
+                        key={id}
+                        className="rounded-lg border border-neutral-200 px-4 py-2 shadow-sm"
+                    >
+                        Id: {id}
+                    </p>
+                ))}
+            </div>
         </div>
     );
 };
