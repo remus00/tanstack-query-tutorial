@@ -1,11 +1,12 @@
-import { BackToHome } from '../components/back-to-home';
+import { Container } from '../components/container';
+import { NavigateCTA } from '../components/navigate-cta';
 import { Separator } from '../components/separator';
 
 export const ProjectsPage = () => {
     return (
-        <>
-            <BackToHome />
+        <Container>
+            <NavigateCTA />
             <Separator />
-        </>
+        </Container>
     );
 };

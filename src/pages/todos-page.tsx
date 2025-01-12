@@ -1,6 +1,6 @@
-import { BackToHome } from '../components/back-to-home';
 import { Container } from '../components/container';
 import { DeleteTodo } from '../components/delete-todo';
+import { NavigateCTA } from '../components/navigate-cta';
 import { NewTodo } from '../components/new-todo';
 import { Separator } from '../components/separator';
 import { TodoById } from '../components/todo-by-id';
@@ -10,7 +10,7 @@ import { UpdateTodo } from '../components/update-todo';
 export const TodosPage = () => {
     return (
         <Container>
-            <BackToHome />
+            <NavigateCTA />
             <Separator />
             <Todos />
             <Separator />
