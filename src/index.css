@@ -31,3 +31,8 @@
     background: greenyellow;
     padding: 2px 4px;
 }
+
+.red-btn {
+    background-color: rgb(171, 42, 42);
+    color: white;
+}

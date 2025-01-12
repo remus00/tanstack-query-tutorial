@@ -7,7 +7,7 @@ export const NewTodo = () => {
     const { register, handleSubmit } = useForm<ITodo>();
 
     const handleCreateTodoSubmit: SubmitHandler<ITodo> = (data) => {
-        mutate(data);
+        mutate({ ...data, checked: false });
     };
     return (
         <div className="container">

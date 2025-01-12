@@ -15,3 +15,7 @@ export const getTodoById = async (id: number) => {
 export const createTodo = async (data: ITodo) => {
     await axiosInstance.post('todos', data);
 };
+
+export const updateTodo = async (data: ITodo) => {
+    await axiosInstance.patch(`todos/${data.id}`, data);
+};
